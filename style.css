@@ -29,24 +29,22 @@ header {
 }
 
 header h1 {
-  font-family: "Bodoni Moda", serif;
   font-size: 2.5em;
   margin-bottom: 0.3em;
+  font-family: 'Bodoni Moda', serif; /* Apply Bauer Bodoni font */
 }
 
 header p {
   font-size: 1.2em;
+  font-family: 'Bodoni Moda', serif; /* Apply Bauer Bodoni font */
 }
 
 /* Hero section styling */
 .hero {
-  background: linear-gradient(135deg, #fdfcfb, #e2d1c3);
-  color: #222;
+  background: url('hero-image.jpg') no-repeat center center/cover;
+  color: #fff;
   padding: 4em 0;
   text-align: center;
-}
-.hero h2, .hero p {
-  text-shadow: 0 1px 2px rgba(255,255,255,0.8);
 }
 
 .hero h2 {
@@ -59,8 +57,16 @@ header p {
   margin-bottom: 1em;
 }
 
-/* Button styling */
+.hero .button-container {
+  text-align: center;
+  margin-top: 20px;
+}
 
+.hero .btn {
+  display: inline-block;
+}
+
+/* Button styling */
 .btn {
   display: inline-block;
   background: #e8491d;
@@ -69,13 +75,12 @@ header p {
   text-decoration: none;
   font-size: 1em;
   border-radius: 5px;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-.btn:hover {
-  background: #cf3e13;
-  transform: scale(1.05);
+  transition: background 0.3s ease;
 }
 
+.btn:hover {
+  background: #cf3e13;
+}
 
 /* About section styling */
 .about {
@@ -104,21 +109,37 @@ footer {
   font-size: 0.9em;
 }
 
-@media (max-width: 768px) {
-  header h1 {
-  font-family: "Bodoni Moda", serif;
-    font-size: 2em;
-  }
-  .hero h2 {
-    font-size: 2em;
-  }
-  .about h2 {
-    font-size: 1.6em;
-  }
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 2em auto;
 }
 
-/* Responsive layout */
-@media (max-width: 600px) {
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-container {
+  border-radius: 12px;
+  animation: fadeIn 1s ease-in-out;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  background-color: #000; /* fallback in case video loads late */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .container {
     width: 90%;
   }
@@ -127,33 +148,46 @@ footer {
     font-size: 2em;
   }
 
-  .hero h2 {
-    font-size: 1.8em;
+  header p {
+    font-size: 1em;
   }
 
-  .hero p, .about p {
-    font-size: 1em;
+  .hero {
+    padding: 2em 0;
+  }
+
+  .hero .hero-image {
+    width: 100%;
+    height: auto;
   }
 
   .btn {
     padding: 0.6em 1.5em;
     font-size: 0.9em;
   }
+
+  .about {
+    padding: 2em 0;
+  }
+
+  .about img {
+    width: 100%;
+    height: auto;
+  }
+
+  footer {
+    font-size: 0.8em;
+  }
 }
 
-.preview {
-  background: #f4f4f4;
-  padding: 4em 0;
-  text-align: center;
-}
+/* For very small devices */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.8em;
+  }
 
-.preview h2 {
-  font-size: 2em;
-  margin-bottom: 1em;
-}
-
-.hero-image {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 2em;
+  .btn {
+    padding: 0.5em 1.2em;
+    font-size: 0.8em;
+  }
 }
