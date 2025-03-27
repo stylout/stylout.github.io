@@ -1,59 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,700&display=swap" rel="stylesheet">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Stylout - Snap, Search, Shop</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stylout — Snap. Search. Shop.</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 </head>
+
 <body>
-  <!-- Header -->
   <header>
-    <div class="container">
-      <h1>Stylout</h1>
-      <p>Designed To Outstyle</p>
+    <div class="nav-container">
+      <div class="logo">Stylout</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#join">Join Us</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
   <section class="hero">
-    <div class="container">
-      <img src="stylout.png" alt="Stylout: Snap, Search, Shop" class="hero-image" />
-      <div class="button-container">
-        <a href="https://forms.gle/62U9MiRPeboQaSQm6" class="btn">Join Our Beta</a>
+    <div class="hero-text">
+      <h1>Snap. Search. Shop.</h1>
+      <p>Discover outfits from images, text, or voice. Stylout is your personal fashion stylist powered by AI.</p>
+      <a href="#join" class="cta-button">Join the Beta</a>
+    </div>
+  </section>
+
+  <section id="about" class="info-section">
+    <h2>What is Stylout?</h2>
+    <p>Stylout is a next-gen fashion discovery platform for Gen Z. Upload a photo, describe your vibe, or just speak — and get fully styled outfit recommendations powered by AI.</p>
+  </section>
+
+  <section id="features" class="features">
+    <h2>Features</h2>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <h3>📷 Image-Based Search</h3>
+        <p>Upload your photo and get visual outfit matches instantly.</p>
+      </div>
+      <div class="feature-item">
+        <h3>🗣️ Voice/Text Search</h3>
+        <p>Describe your vibe — "haldi look with sneakers" — and Stylout finds it.</p>
+      </div>
+      <div class="feature-item">
+        <h3>📊 Personalized Feed</h3>
+        <p>Swipe through curated looks based on your style preferences.</p>
+      </div>
+      <div class="feature-item">
+        <h3>📲 StylSnaps</h3>
+        <p>Share your outfits, get feedback, and inspire friends.</p>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section class="about">
-    <div class="container">
-      <img src="stylout.png" alt="Stylout: Snap, Search, Shop" class="hero-image" />
-    </div>
+  <section id="join" class="cta-section">
+    <h2>Be the first to try Stylout</h2>
+    <p>We’re launching soon. Get early access and help shape the future of fashion tech.</p>
+    <a href="#" class="cta-button">Join Beta</a>
   </section>
 
-  
-  <!-- Preview Video Section -->
-  <!-- <section class="preview">
-    <div class="container">
-      <h2>Check out the preview here</h2>
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/jubIQEQ5ja4"
-              title="Stylout Preview"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-    </div>
-    </div>
-  </section> -->
-
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Stylout AI Pvt Ltd. All rights reserved.</p>
-    </div>
+  <footer id="contact">
+    <p>&copy; 2025 Stylout AI Pvt Ltd. All rights reserved.</p>
+    <p>Made with ❤️ by Parth & Tejas</p>
   </footer>
 </body>
+
 </html>
