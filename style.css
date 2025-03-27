@@ -1,193 +1,113 @@
-/* Reset some basic elements */
-* {
+/* Import font */
+body {
+  font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  background-color: #fdfaf7;
+  color: #2d2d2d;
 }
 
-/* Body styling */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f8f8f8;
-  color: #333;
-}
-
-/* Container */
-.container {
-  width: 80%;
-  margin: 0 auto;
-  max-width: 1200px;
-}
-
-/* Header styling */
 header {
-  background: #333;
-  color: #fff;
-  padding: 1em 0;
-  text-align: center;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eee;
+  padding: 20px 40px;
 }
 
-header h1 {
-  font-size: 2.5em;
-  margin-bottom: 0.3em;
-  font-family: 'Bodoni Moda', serif; /* Apply Bauer Bodoni font */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
 }
 
-header p {
-  font-size: 1.2em;
-  font-family: 'Bodoni Moda', serif; /* Apply Bauer Bodoni font */
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
-/* Hero section styling */
-.hero {
-  background: url('hero-image.jpg') no-repeat center center/cover;
-  color: #fff;
-  padding: 4em 0;
-  text-align: center;
-}
-
-.hero h2 {
-  font-size: 2.5em;
-  margin-bottom: 0.5em;
-}
-
-.hero p {
-  font-size: 1.2em;
-  margin-bottom: 1em;
-}
-
-.hero .button-container {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.hero .btn {
-  display: inline-block;
-}
-
-/* Button styling */
-.btn {
-  display: inline-block;
-  background: #e8491d;
-  color: #fff;
-  padding: 0.8em 2em;
+nav a {
+  margin-left: 25px;
   text-decoration: none;
-  font-size: 1em;
-  border-radius: 5px;
-  transition: background 0.3s ease;
+  color: #555;
+  font-weight: 500;
 }
 
-.btn:hover {
-  background: #cf3e13;
+nav a:hover {
+  color: #d77b64;
 }
 
-/* About section styling */
-.about {
-  padding: 4em 0;
-  background: #fff;
+.hero {
+  background: linear-gradient(180deg, #fff5ef, #fdfaf7);
+  text-align: center;
+  padding: 100px 20px 60px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+.cta-button {
+  padding: 12px 28px;
+  background-color: #d77b64;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #c0664f;
+}
+
+.info-section, .features, .cta-section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
   text-align: center;
 }
 
-.about h2 {
-  font-size: 2em;
-  margin-bottom: 1em;
+.features .feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
 }
 
-.about p {
-  font-size: 1.1em;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Footer styling */
-footer {
-  background: #333;
-  color: #fff;
-  text-align: center;
-  padding: 1em 0;
-  font-size: 0.9em;
-}
-
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
-  margin: 2em auto;
-}
-
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.video-container {
+.feature-item {
+  background-color: #ffffff;
+  padding: 20px;
   border-radius: 12px;
-  animation: fadeIn 1s ease-in-out;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  background-color: #000; /* fallback in case video loads late */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+.feature-item h3 {
+  margin-bottom: 10px;
+  color: #d77b64;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .container {
-    width: 90%;
-  }
-
-  header h1 {
-    font-size: 2em;
-  }
-
-  header p {
-    font-size: 1em;
-  }
-
-  .hero {
-    padding: 2em 0;
-  }
-
-  .hero .hero-image {
-    width: 100%;
-    height: auto;
-  }
-
-  .btn {
-    padding: 0.6em 1.5em;
-    font-size: 0.9em;
-  }
-
-  .about {
-    padding: 2em 0;
-  }
-
-  .about img {
-    width: 100%;
-    height: auto;
-  }
-
-  footer {
-    font-size: 0.8em;
-  }
+footer {
+  background-color: #fff8f3;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 0.95rem;
+  color: #888;
 }
 
-/* For very small devices */
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 1.8em;
+@media (max-width: 600px) {
+  .hero-text h1 {
+    font-size: 2rem;
   }
 
-  .btn {
-    padding: 0.5em 1.2em;
-    font-size: 0.8em;
+  .cta-button {
+    font-size: 1rem;
   }
 }
